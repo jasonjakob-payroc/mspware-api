@@ -6,10 +6,18 @@
 using Payroc.MSPWareApi.Examples.DotNet.DocumentUpload;
 using System.Net.Http.Headers;
 
-string apiurl = "http://xxx.mspware.com";
-string appid = "your app id";
-string appkey = "your app key";
-string merchantApplicationNo = "12345";
+/* dev testing */
+string apiurl = "http://localapi.mspware.com:3000";
+string appid = "jjakob";
+string appkey = "849E46F2BE600A62082D5261A7E3044663A446E2284568A645FA4777FC7FDED6";
+string merchantApplicationNo = "95649";
+
+/* production testing
+string apiurl = "http://api.mspware.com";
+string appid = "fidano";
+string appkey = "804ABC928C232B7D0D556A750E4308DA31148691F476116C26823110560B5BC4";
+string merchantApplicationNo = "680";
+ */
 
 //load the file and stuff it into multipart form data
 string filePath = Environment.CurrentDirectory + @"\\dummy.pdf";
