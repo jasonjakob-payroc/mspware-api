@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentUpload", "DocumentUpload.csproj", "{2605A067-ED24-4992-9ADE-B13C2E8C5E7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payroc.MspwareApi.Tests", "Payroc.MspwareApi.Tests.csproj", "{B3AAB2B5-6687-4DFD-97CE-A8AE9F11EE11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2605A067-ED24-4992-9ADE-B13C2E8C5E7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2605A067-ED24-4992-9ADE-B13C2E8C5E7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2605A067-ED24-4992-9ADE-B13C2E8C5E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2605A067-ED24-4992-9ADE-B13C2E8C5E7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3AAB2B5-6687-4DFD-97CE-A8AE9F11EE11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3AAB2B5-6687-4DFD-97CE-A8AE9F11EE11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3AAB2B5-6687-4DFD-97CE-A8AE9F11EE11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3AAB2B5-6687-4DFD-97CE-A8AE9F11EE11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FB966F82-0EC7-4217-98AE-7D2652CC4335}
+		SolutionGuid = {F7ECE9AE-6366-4D18-BAFB-3F6A6E243BA9}
 	EndGlobalSection
 EndGlobal

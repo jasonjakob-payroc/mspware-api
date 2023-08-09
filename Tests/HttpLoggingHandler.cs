@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Payroc.MSPWareApi.Examples.DotNet.DocumentUpload
+namespace Payroc.MSPWareApi.Tests
 {
     public class HttpLoggingHandler : DelegatingHandler
     {
