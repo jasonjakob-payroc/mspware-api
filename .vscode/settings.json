@@ -1,0 +1,8 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "Tests/Java/lib/okhttp-3.9.0.jar",
+        "Tests/Java/lib/okio-1.13.0.jar",
+        "Tests/Java/lib/logging-interceptor-3.9.0.jar"
+    ]
+}

@@ -49,7 +49,7 @@ public class ApiTest {
         RequestBody requestBody = new MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
                 .addFormDataPart("file", filePath.getFileName().toString(),
-                        RequestBody.create(fileBytes, MediaType.parse("multipart/form-data")))
+                        RequestBody.create(MediaType.parse("multipart/form-data"), fileBytes, 0, fileBytes.length))
                 .build();
 
         Request request = new Request.Builder()
@@ -63,7 +63,7 @@ public class ApiTest {
 
     public void putSubmitApp() throws IOException {
         String json = "{\"documentlist\": \"180184, 180206\",\"mpadocument\":\"180293\",\"mpadocumentpage\":\"7\",\"override\":false}";
-        RequestBody body = RequestBody.create(json, MediaType.parse("application/json"));
+        RequestBody body = RequestBody.create(MediaType.parse("application/json"), json);
 
         Request request = new Request.Builder()
                 .url(apiurl + "/" + appid + "/v2/applications/" + merchantApplicationNo + "/submit")
@@ -76,8 +76,14 @@ public class ApiTest {
 
     public static void main(String[] args) {
         ApiTest apiTest = new ApiTest();
-        apiTest.getApplicationTypes();
-        apiTest.postUploadDocument();
-        apiTest.putSubmitApp();
+
+        try {
+            apiTest.getApplicationTypes();
+            apiTest.postUploadDocument();
+            apiTest.putSubmitApp();
+        } catch(Exception ex) {
+            System.out.println("Exception: " + ex.getMessage());
+        }
+        
     }
 }
