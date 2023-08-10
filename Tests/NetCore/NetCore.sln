@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payroc.MspwareApi.Tests", "Payroc.MspwareApi.Tests.csproj", "{B3AAB2B5-6687-4DFD-97CE-A8AE9F11EE11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCore", "NetCore.csproj", "{21A80B94-22A7-4B77-9532-4E19D843F6FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B3AAB2B5-6687-4DFD-97CE-A8AE9F11EE11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B3AAB2B5-6687-4DFD-97CE-A8AE9F11EE11}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B3AAB2B5-6687-4DFD-97CE-A8AE9F11EE11}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B3AAB2B5-6687-4DFD-97CE-A8AE9F11EE11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21A80B94-22A7-4B77-9532-4E19D843F6FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21A80B94-22A7-4B77-9532-4E19D843F6FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21A80B94-22A7-4B77-9532-4E19D843F6FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21A80B94-22A7-4B77-9532-4E19D843F6FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F7ECE9AE-6366-4D18-BAFB-3F6A6E243BA9}
+		SolutionGuid = {2CFD9A75-9840-4C84-A339-121CCDA4A89C}
 	EndGlobalSection
 EndGlobal

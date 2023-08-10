@@ -1,13 +1,12 @@
 import okhttp3.*;
 import okhttp3.logging.HttpLoggingInterceptor;
-import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class UnitTest1 {
+public class ApiTest {
 
     private final String apiurl = "http://localapi.mspware.com:3000";
     private final String appid = "yourAppIdHere";
@@ -16,7 +15,7 @@ public class UnitTest1 {
     
     private OkHttpClient httpClient;
 
-    public UnitTest1() {
+    public ApiTest() {
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 
@@ -34,7 +33,6 @@ public class UnitTest1 {
                 .build();
     }
 
-    @Test
     public void getApplicationTypes() throws IOException {
         Request request = new Request.Builder()
                 .url(apiurl + "/" + appid + "/v2/applications/types")
@@ -44,21 +42,6 @@ public class UnitTest1 {
         System.out.println("response: " + response.body().string());
     }
 
-    @Test
-    public void putSubmitApp() throws IOException {
-        String json = "{\"documentlist\": \"180184, 180206\",\"mpadocument\":\"180293\",\"mpadocumentpage\":\"7\",\"override\":false}";
-        RequestBody body = RequestBody.create(json, MediaType.parse("application/json"));
-
-        Request request = new Request.Builder()
-                .url(apiurl + "/" + appid + "/v2/applications/" + merchantApplicationNo + "/submit")
-                .put(body)
-                .build();
-
-        Response response = httpClient.newCall(request).execute();
-        System.out.println("response: " + response.body().string());
-    }
-
-    @Test
     public void postUploadDocument() throws IOException {
         Path filePath = Paths.get(System.getProperty("user.dir"), "dummy.pdf");
         byte[] fileBytes = Files.readAllBytes(filePath);
@@ -76,5 +59,25 @@ public class UnitTest1 {
 
         Response response = httpClient.newCall(request).execute();
         System.out.println("response: " + response.body().string());
+    }
+
+    public void putSubmitApp() throws IOException {
+        String json = "{\"documentlist\": \"180184, 180206\",\"mpadocument\":\"180293\",\"mpadocumentpage\":\"7\",\"override\":false}";
+        RequestBody body = RequestBody.create(json, MediaType.parse("application/json"));
+
+        Request request = new Request.Builder()
+                .url(apiurl + "/" + appid + "/v2/applications/" + merchantApplicationNo + "/submit")
+                .put(body)
+                .build();
+
+        Response response = httpClient.newCall(request).execute();
+        System.out.println("response: " + response.body().string());
+    }
+
+    public static void main(String[] args) {
+        ApiTest apiTest = new ApiTest();
+        apiTest.getApplicationTypes();
+        apiTest.postUploadDocument();
+        apiTest.putSubmitApp();
     }
 }
