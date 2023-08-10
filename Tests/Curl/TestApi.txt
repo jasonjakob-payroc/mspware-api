@@ -1,0 +1,20 @@
+# NOTE: curl on windows fails because of a bug that doesn't add headers to the request. 
+# Sooooo these calls will not work on windows instead use curl on linux or WLS2 linux distro on windows.
+
+#get application types
+
+request: curl -H 'x-app-id: yourAppIdHere' -H 'x-api-key: yourAppKeyHere' -v http://localapi.mspware.com:3000/jjakob/v2/applications/types
+
+response: {"success":true,"types":[{"merchantapplicationtypeno":34,"name":"Elavon US Application"},{"merchantapplicationtypeno":35,"name":"AppAssist New Application Form"},{"merchantapplicationtypeno":37,"name":"Payroc Application"},{"merchantapplicationtypeno":42,"name":"Elavon Canada Application"},{"merchantapplicationtypeno":42,"name":"Elavon Canada Application"}]}
+
+#post to upload a document. make sure to copy the dummy file over to your linux user folder
+
+request: curl -X POST -H 'x-app-id: yourAppIdHere' -H 'x-api-key: yourAppKeyHere' -H 'Accept-Encoding: gzip, deflate, br' -F file=@/mnt/c/Users/jason.jakob/Documents/dummy.pdf -k -v http://localapi.mspware.com:3000/jjakob/v2/applications/95394/documents
+
+response: {"DOCID":180753,"message":"","success":true,"FILENAME":"dummy 8.pdf"}
+
+#put to submit an app to processor. add the content type header to send json in the body
+
+request: curl -X PUT -H 'x-app-id: yourAppIdHere' -H 'x-api-key: yourAppKeyHere' -H 'Content-Type: application/json' -d '{ "documentlist": "180184,180206","mpadocument": "180293","mpadocumentpage": "7","override": false }' -v http://localapi.mspware.com:3000/jjakob/v2/applications/95394/submit
+
+response: {"success":false,"error":"The mpadocument parameter contains a document id that is not the correct signed application"}
