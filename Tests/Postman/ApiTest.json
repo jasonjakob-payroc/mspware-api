@@ -1,0 +1,855 @@
+{
+	"info": {
+		"_postman_id": "2794bf53-727b-4878-bba8-c88776625252",
+		"name": "MSPWare API V2.0.1 Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Applications",
+			"item": [
+				{
+					"name": "applications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications?page=1&pageSize=1000",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "1000"
+								}
+							]
+						},
+						"description": "Get a list of merchants.  Each record provides a link to the merchant detail GET request for that merchant to retrieve detailed demographic information."
+					},
+					"response": []
+				},
+				{
+					"name": "application/types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/types",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applications/types/{typeno}/templates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/types/{{merchantapplicationtypeno}}/templates",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"types",
+								"{{merchantapplicationtypeno}}",
+								"templates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applications/types/{typeno}/schema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/types/{{merchantapplicationtypeno}}/schema",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"types",
+								"{{merchantapplicationtypeno}}",
+								"schema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applications/{appno}/form",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/{{merchantApplicationNo}}/form",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"{{merchantApplicationNo}}",
+								"form"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applications/{appno}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/{{merchantApplicationNo}}",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"{{merchantApplicationNo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applications/{appno}/status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/{{merchantApplicationNo}}/status",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"{{merchantApplicationNo}}",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applications",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dba\" : \"JH API TEST 0504 2\" ,\r\n    \"salespersonid\" : 45000 ,\r\n    \"merchantapplicationtypeno\" : 34 ,\r\n    \"templatemerchantapplicationno\" : 86727\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applications/{appno}/form",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"existing_merchant_id\" : \"some string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/{{merchantApplicationNo}}/form",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"{{merchantApplicationNo}}",
+								"form"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applications/{appno}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/{{merchantApplicationNo}}",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"{{merchantApplicationNo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applications/{appno}/promote",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/{{merchantApplicationNo}}/promote",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"{{merchantApplicationNo}}",
+								"promote"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applications/{appno}/submit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"documentlist\": \"180184,180206\",\r\n    \"mpadocument\": \"180293\",\r\n    \"mpadocumentpage\": \"7\",\r\n    \"override\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/{{merchantApplicationNo}}/submit",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"{{merchantApplicationNo}}",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applications/{appno}/demote",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/{{merchantApplicationNo}}/demote",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"{{merchantApplicationNo}}",
+								"demote"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Documents",
+			"item": [
+				{
+					"name": "applications/{appno}/documents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/{{merchantApplicationNo}}/documents",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"{{merchantApplicationNo}}",
+								"documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applications/{appno}/documents/{docno}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/{{merchantApplicationNo}}/documents/{{merchantapplicationdocumentno}}",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"{{merchantApplicationNo}}",
+								"documents",
+								"{{merchantapplicationdocumentno}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applications/{appno}/documents/{docno}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/1/documents/{{merchantapplicationdocumentno}}",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"1",
+								"documents",
+								"{{merchantapplicationdocumentno}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applications/{appno}/documents",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Jason/src/jjakob-payroc/mspware-api/Examples/DotNet/DocumentUpload/dummy.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/{{merchantApplicationNo}}/documents",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"{{merchantApplicationNo}}",
+								"documents"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Signatures",
+			"item": [
+				{
+					"name": "applications/{appno}/signatures",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/{{merchantApplicationNo}}/signatures",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"{{merchantApplicationNo}}",
+								"signatures"
+							],
+							"query": [
+								{
+									"key": "appkey",
+									"value": "{{appkey}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applications/{appno}/signatures",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/applications/{{merchantApplicationNo}}/signatures",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"applications",
+								"{{merchantApplicationNo}}",
+								"signatures"
+							],
+							"query": [
+								{
+									"key": "appkey",
+									"value": "{{appkey}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Banks",
+			"item": [
+				{
+					"name": "banks/abaroutingnumbers/{routingnumber}",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Merchants",
+			"item": [
+				{
+					"name": "merchants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/merchants?active=1&page=1&pageSize=1000",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"merchants"
+							],
+							"query": [
+								{
+									"key": "active",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "1000"
+								}
+							]
+						},
+						"description": "Get a list of merchants.  Each record provides a link to the merchant detail GET request for that merchant to retrieve detailed demographic information."
+					},
+					"response": []
+				},
+				{
+					"name": "merchants/processors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/merchants/processors?appkey={{appkey}}",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"merchants",
+								"processors"
+							],
+							"query": [
+								{
+									"key": "appkey",
+									"value": "{{appkey}}"
+								}
+							]
+						},
+						"description": "Retrieve a list of distinct processor types represented in the merchants collection.  These can be passed in a \"processor\" query string parameter in the GET:/merchants call to filter the results."
+					},
+					"response": []
+				},
+				{
+					"name": "merchants/{mid}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/merchants/{{mid}}",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"merchants",
+								"{{mid}}"
+							]
+						},
+						"description": "Retrieve an individual merchant by MID."
+					},
+					"response": []
+				},
+				{
+					"name": "merchants/{mid}/statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/merchants/{{mid}}/statistics",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"merchants",
+								"{{mid}}",
+								"statistics"
+							]
+						},
+						"description": "Retrieve basic processing statistics about a merchant by MID."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Residuals",
+			"item": [
+				{
+					"name": "residuals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/residuals?page=1&pageSize=1000",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"residuals"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "1000"
+								}
+							]
+						},
+						"description": "Get a list of residual batches that have been calculated and made available to users."
+					},
+					"response": []
+				},
+				{
+					"name": "residuals/{type_id}/{batch_id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/residuals/{{residualtypeid}}/{{residualbatchid}}/?page=1&pageSize=1000",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"residuals",
+								"{{residualtypeid}}",
+								"{{residualbatchid}}",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "1000"
+								}
+							]
+						},
+						"description": "Get a list of residual batches that have been calculated and made available to users."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/users?page=1&pageSize=1000",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "1000"
+								}
+							]
+						},
+						"description": "Retrieve a user by system user ID.  Depending on the type of user retrieved (staff, sales agent, referral partners) a structure of meta information (staff_information, agent_information, referral_partner_information) will be included in the respose."
+					},
+					"response": []
+				},
+				{
+					"name": "users/{userid}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}{{appid}}/v2/users/{{userid}}",
+							"host": [
+								"{{apiurl}}{{appid}}"
+							],
+							"path": [
+								"v2",
+								"users",
+								"{{userid}}"
+							]
+						},
+						"description": "Retrieve a user by system user ID.  Depending on the type of user retrieved (staff, sales agent, referral partners) a structure of meta information (staff_information, agent_information, referral_partner_information) will be included in the respose."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Connector",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "collection",
+							"value": "applicationtypes",
+							"type": "default"
+						},
+						{
+							"key": "fn",
+							"value": "getApplicationTypes",
+							"type": "default"
+						},
+						{
+							"key": "salespersonid",
+							"value": "0",
+							"type": "default"
+						},
+						{
+							"key": "appid",
+							"value": "localapi",
+							"type": "default"
+						},
+						{
+							"key": "appkey",
+							"value": "849E46F2BE600A62082D5261A7E3044663A446E2284568A645FA4777FC7FDED6",
+							"type": "default"
+						},
+						{
+							"key": "method",
+							"value": "connect",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mspware.jjakob.pro.fidano.com/Components/apiv2/connector.cfc",
+					"protocol": "https",
+					"host": [
+						"mspware",
+						"jjakob",
+						"pro",
+						"fidano",
+						"com"
+					],
+					"path": [
+						"Components",
+						"apiv2",
+						"connector.cfc"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{appkey}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "X-Api-Key",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "appkey",
+			"value": "yourAppKey"
+		},
+		{
+			"key": "apiurl",
+			"value": "http://localapi.mspware.com:3000/"
+		},
+		{
+			"key": "mid",
+			"value": "8000053739"
+		},
+		{
+			"key": "userid",
+			"value": "7134"
+		},
+		{
+			"key": "residualtypeid",
+			"value": "2"
+		},
+		{
+			"key": "residualbatchid",
+			"value": "201911"
+		},
+		{
+			"key": "merchantApplicationNo",
+			"value": "95394",
+			"type": "default"
+		},
+		{
+			"key": "appid",
+			"value": "yourAppId",
+			"type": "default"
+		},
+		{
+			"key": "merchantapplicationdocumentno",
+			"value": "180168",
+			"type": "default"
+		},
+		{
+			"key": "merchantapplicationtypeno",
+			"value": "34",
+			"type": "default"
+		}
+	]
+}
