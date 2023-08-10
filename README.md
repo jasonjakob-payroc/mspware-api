@@ -6,6 +6,7 @@ Curl
 Java
 Nodejs
 Python
+Go
 
 You'll need an appid and appkey to be added to the header of each request for authentication
 

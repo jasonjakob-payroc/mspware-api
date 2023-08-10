@@ -7,8 +7,8 @@ class ApiTest:
     def __init__(self):
         # dev testing
         self.apiurl = 'http://localapi.mspware.com:3000'
-        self.appid = 'jjakob' #'yourAppIdHere'
-        self.appkey = '849E46F2BE600A62082D5261A7E3044663A446E2284568A645FA4777FC7FDED6' #'yourAppKeyHere'
+        self.appid = 'yourAppIdHere'
+        self.appkey = 'yourAppKeyHere'
         self.merchantApplicationNo = '95649'
         self.baseURL = f'{self.apiurl}/{self.appid}/v2/'
 
